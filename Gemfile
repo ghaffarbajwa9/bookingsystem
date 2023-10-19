@@ -66,3 +66,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise", "~> 4.9"
+
+gem "tailwindcss-rails", "~> 2.0"
+
+gem "cssbundling-rails", "~> 1.3"
