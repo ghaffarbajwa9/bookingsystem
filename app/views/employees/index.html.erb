@@ -1,0 +1,24 @@
+<h1>Employees</h1>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li>
+      <%= employee.name %>
+    </li>
+    <li>
+      <%= employee.email %>
+    </li>
+    <li>
+      <%= employee.phone %>
+    </li>
+    <li>
+      <%= employee.emptype %>
+    </li>
+    <li>
+      <%= link_to "Show", employee %>
+    </li>
+    
+  <% end %>
+</ul>
+
+

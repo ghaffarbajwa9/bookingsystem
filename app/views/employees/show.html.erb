@@ -1,0 +1,22 @@
+<h1>Employees#show</h1>
+    <p>
+      <%= @employee.name %>
+    </p>
+    <p>
+      <%= @employee.email %>
+    </p>
+    <p>
+      <%= @employee.phone %>
+    </p>
+    <p>
+      <%= @employee.emptype %>
+    </p>
+<ul>
+    <li>
+      <%= link_to "Edit", edit_employee_path(@employee) %>
+    </li>
+    <li><%= link_to "Destroy", employee_path(@employee), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

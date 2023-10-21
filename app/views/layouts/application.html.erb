@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   
@@ -14,20 +13,21 @@
  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>  
 <%
 =end%>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
 <%= render "layouts/navbar" %>
 <% if flash[:notice] %>
-  <div class="alert alert-success alert-dismissible fade show mb-0" role="aler">
+  <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
     <%= flash[:notice] %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Clse"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
   </div>
 <% end %>
 <% if flash[:alert] %>
-  <div class="alert alert-warning alert-dismissible fade show mb-0" role="aler">
+  <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
     <%= flash[:alert] %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Clse"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
   </div>
 <% end %>
   <div class="container-fluid">

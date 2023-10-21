@@ -1,0 +1,31 @@
+<h1>Employees#create</h1>
+<p>Find me in app/views/employees/create.html.erb</p>
+<h1>New employee</h1>
+
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %><br>
+    
+  </div>
+  <div>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %><br>
+    
+  </div>
+  <div>
+    <%= form.label :emptype %><br>
+    <%= form.select :emptype, Visible::VALID_EMPTYPES %><br>
+    
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

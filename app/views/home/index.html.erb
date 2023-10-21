@@ -1,2 +1,12 @@
 <h1>Welcome to Booking System</h1>
 <p>Developed and maintained by Twinspider</p>
+<% if current_user %>
+    <% if current_user.usertype=='admin' %>
+        <h3>Welcome to dashbaord</h3>
+        <%= render 'admin_dashboard' %>
+    <% else %>
+        <h3>You are guest user</h3>
+    <% end %>
+<% else %>
+    <h2>Login or Signup </h2>
+<% end %>
