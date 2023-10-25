@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @employees = Employee.all
   end
@@ -7,7 +7,6 @@ class EmployeesController < ApplicationController
   def new 
     @employee = Employee.new
   end
-
   def create
     @employee = Employee.new(emp_params)
 
@@ -31,7 +30,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
 
     if @employee.update(emp_params)
-      redirect_to @employee
+      redirect_to employees_path
     else
       render :edit, status: :unprocessable_entity
     end
@@ -42,7 +41,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
     @employee.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to employees_path, status: :see_other
   end
 
   private 

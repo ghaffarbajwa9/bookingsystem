@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2023-10-22
+  status: MyText
+  remarks: MyString
+  employee: one
+
+two:
+  date: 2023-10-22
+  status: MyText
+  remarks: MyString
+  employee: two

@@ -1,0 +1,28 @@
+<h1>Customers</h1>
+
+<%= link_to 'New Customer', new_customer_path, :class=>"btn btn-info" %>
+
+<table class='table table-striped'>
+  <tr>
+    <th>Customer</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Actions</th>
+  </tr>
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.email %></td>
+      <td><%= customer.phone %></td>
+      <td>
+        <%= link_to 'Show', customer, :class=>"btn btn-info" %>
+        <%= link_to 'Edit', edit_customer_path(customer), :class=>"btn btn-primary" %>
+        <%= link_to 'Delete', customer_path(customer), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+        }, :class=>"btn btn-danger" %>
+      </td>
+    </tr>
+  <% end
+  %>
+</table>

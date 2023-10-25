@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :attendances
   resources :employees
+  resources :customers 
+  resources :appointments
+  
 
   root to: 'home#index'
   devise_for :users 

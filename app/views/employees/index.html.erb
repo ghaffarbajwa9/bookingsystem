@@ -1,25 +1,27 @@
-<h1>Employees</h1>
-
-<ul>
-  <% @employees.each do |employee| %>
-    <li>
-      <%= employee.name %>
-    </li>
-    <li>
-      <%= employee.email %>
-    </li>
-    <li>
-      <%= employee.phone %>
-    </li>
-    <li>
-      <%= employee.emptype %>
-    </li>
-    <li>
-      <%= link_to "Show", employee %>
-    </li>
+<h1>Employees List</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Name </th>             
+    <th>Email </th>                      
+    <th>Phone </th>
+    <th>Employee Type </th>                      
+    <th>Actions</th>
+  </tr>
+ <% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.name%></td>         
+    <td><%=employee.email %></td>   
+    <td><%=employee.phone %></td>   
+    <td><%=employee.emptype %></td>  
+    <td><%= link_to 'Edit', edit_employee_path(employee), :class=>"btn btn-info" %><%= link_to 'Delete', employee_path(employee), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+    }, :class=>"btn btn-danger" %></td>  
     
+
+  </tr>
   <% end %>
-</ul>
+ </table>
 <%= link_to 'Home', root_path()%>
 
 

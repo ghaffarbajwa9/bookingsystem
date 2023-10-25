@@ -1,4 +1,6 @@
-<%= form_with model: employee do |form| %>
+<h1>Book for an Appointment</h2>
+
+<%= form_with model: @customer do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -13,12 +15,6 @@
   <div>
     <%= form.label :phone %><br>
     <%= form.number_field :phone %><br>
-    
-  </div>
-  <div>
-    <%= form.label :emptype %><br>
-    <%= form.select :emptype, Visible::VALID_EMPTYPES %><br>
-    
   </div>
 
   <div>

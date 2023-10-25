@@ -1,0 +1,24 @@
+<%= form_with model: attendance do |form| %>
+  <div>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :employee %><br>
+    <%= form.select(:employee_id, Employee.all.collect { |e| [e.name, e.id] }, {:include_blank => true, :selected => form.object.employee_id}) %>
+<br>
+  </div>
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, Visible::ATTENDANCE_STATUS %><br>
+  </div>
+  <div>
+    <%= form.label :remarks %><br>
+    <%= form.text_field :remarks %><br>
+    
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

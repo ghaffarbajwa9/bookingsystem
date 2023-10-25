@@ -1,0 +1,25 @@
+<h1>Appointments</h1>
+
+<%= link_to 'New Appointment', new_appointment_path %>
+
+<table class='table table-condensed'>
+  <tr>
+    <th>Customer</th>
+    <th>Staff</th>
+    <th>Appointment Time</th>
+    <th>Actions</th>
+  </tr>
+  <% @appointments.each do |appointment| %>
+    <tr>
+      <td><%= appointment.customer.name %></td>
+      <td><%= appointment.employee.name %></td>
+      <td><%= appointment.date %></td>
+      <td>
+        <%= link_to 'Show', appointment %>
+        <%= link_to 'Edit', edit_appointment_path(appointment) %>
+        <%= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end
+  %>
+</table>

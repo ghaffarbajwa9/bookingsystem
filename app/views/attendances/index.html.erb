@@ -1,0 +1,27 @@
+<h1>Attendances#index</h1>
+<p>Find me in app/views/attendances/index.html.erb</p>
+<%= link_to "Mark Attendance", new_attendance_path %><hr>
+
+<table class="table table-striped">
+  <tr>
+    <th>Date </th>             
+    <th>Employee </th>                      
+    <th>Status </th>                     
+    <th>Edit </th>
+    <th>Delete </th>
+  </tr>
+ <% @attendances.each do |attendance| %>
+  <tr>
+    <td><%= attendance.date%></td>         
+    <td><%=attendance.employee %></td>   
+    <td><%=attendance.status %></td>   
+    <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>     
+    <td><%= link_to 'Delete', attendance_path(attendance), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></td>  
+    
+
+  </tr>
+  <% end %>
+ </table>

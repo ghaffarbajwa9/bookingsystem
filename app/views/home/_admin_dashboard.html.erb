@@ -1,6 +1,17 @@
 <nav>
 <div class="container-fluid">
-  <%= link_to "See Employees", employees_path %><br>
-  <%= link_to "Add Employees", new_employee_path %>
+  <h3>Manage Employees</h3>
+  <%= link_to "Manage Employees", employees_path, :class=>"btn btn-success" %><br>
+  <%= link_to "Add Employees", new_employee_path, :class=>"btn btn-primary" %>
+</div>
+<div class="container-fluid">
+  <h3>Manage Customers</h3>
+  <%= link_to "Manage Customers", customers_path, :class=>"btn btn-success" %><br>
+  <%= link_to "Add Customer", new_customer_path, :class=>"btn btn-primary" %>
+</div>
+<div class="container-fluid">
+  <h3>Manage Appiontment</h3>
+  <%= link_to "Manage Appointments", appointments_path, :class=>"btn btn-success" %><br>
+  <%= link_to "Add Appointment", new_appointment_path, :class=>"btn btn-primary" %>
 </div>
 </nav>

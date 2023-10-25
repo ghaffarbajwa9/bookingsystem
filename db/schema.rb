@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_21_113450) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_24_135237) do
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "date"
+    t.integer "customer_id", null: false
+    t.integer "employee_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_appointments_on_customer_id"
+    t.index ["employee_id"], name: "index_appointments_on_employee_id"
+  end
+
+  create_table "attendances", force: :cascade do |t|
+    t.date "date"
+    t.text "status"
+    t.string "remarks"
+    t.integer "employee_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_attendances_on_employee_id"
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -33,4 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_21_113450) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appointments", "customers"
+  add_foreign_key "appointments", "employees"
+  add_foreign_key "attendances", "employees"
 end
