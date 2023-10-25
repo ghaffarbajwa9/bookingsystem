@@ -1,20 +1,10 @@
-<div style="min-height:100vh;display:flex;flex-direction:column">
-<h1>Welcome to Booking System</h1>
 <% if current_user %>
     <% if current_user.usertype=='admin' %>
-        <h3>Welcome to dashbaord</h3>
         <%= render 'admin_dashboard' %>
-        <footer class="bg-dark text-center text-white" style="position:absolute;bottom:0;width:100vw;left:0;overflow:hidden;">
-            <div class="text-center p-4" style=" background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
-                <a class="text-reset fw-bold" href="https://twinspider.com/">Twinspider.com</a>
-            </div>
-        </footer>
     <% else %>
         <h3>You are guest user</h3>
     <% end %>
 <% else %>
-    <h2>Wellcome to Appointment system </h2>
+    <% controller.redirect_to new_user_session_path %>
 <% end %>
-
-</div>
+   

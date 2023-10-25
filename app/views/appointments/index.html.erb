@@ -1,8 +1,8 @@
 <h1>Appointments</h1>
 
-<%= link_to 'New Appointment', new_appointment_path %>
+<%= link_to 'New Appointment', new_appointment_path, :class=>"btn btn-info" %>
 
-<table class='table table-condensed'>
+<table class='table table-striped'>
   <tr>
     <th>Customer</th>
     <th>Staff</th>
@@ -15,9 +15,9 @@
       <td><%= appointment.employee.name %></td>
       <td><%= appointment.date %></td>
       <td>
-        <%= link_to 'Show', appointment %>
-        <%= link_to 'Edit', edit_appointment_path(appointment) %>
-        <%= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show', appointment , :class=>"btn btn-info" %>
+        <%= link_to 'Edit', edit_appointment_path(appointment) , :class=>"btn btn-primary" %>
+        <%= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %>
       </td>
     </tr>
   <% end
