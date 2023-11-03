@@ -5,6 +5,6 @@ module Visible
 
  included do
     validates :emptype, inclusion: {in: VALID_EMPTYPES}
-    validates :status, inclusion: {in: ATTENDANCE_STATUS}
+    # validates :status, inclusion: {in: ATTENDANCE_STATUS}
 end
 end

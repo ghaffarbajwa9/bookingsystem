@@ -1,10 +1,9 @@
 <% if current_user %>
     <% if current_user.usertype=='admin' %>
-        <%= render 'admin_dashboard' %>
+    <h1>Welcome to dashboard</h1>
     <% else %>
         <h3>You are guest user</h3>
     <% end %>
 <% else %>
     <% controller.redirect_to new_user_session_path %>
 <% end %>
-   
