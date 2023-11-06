@@ -17,7 +17,10 @@
       <td>
         <%= link_to 'Show', appointment , :class=>"btn btn-info" %>
         <%= link_to 'Edit', edit_appointment_path(appointment) , :class=>"btn btn-primary" %>
-        <%= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %>
+        <%= link_to 'Delete', appointment_path(appointment), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+        }, :class=>"btn btn-danger" %>
       </td>
     </tr>
   <% end

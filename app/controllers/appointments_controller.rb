@@ -20,7 +20,12 @@ class AppointmentsController < ApplicationController
       @appointment = Appointment.find(params[:id])
     end
   
-    # Implement update and destroy actions as needed
+    def destroy
+      @appointment = Appointment.find(params[:id])
+      @appointment.destroy
+
+      redirect_to appointments_path, status: :see_other
+    end
   
     private
   
