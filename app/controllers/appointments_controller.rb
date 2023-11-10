@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         redirect_to appointments_path, notice: 'Appointment created successfully.'
       else
-        render 'new'
+        render :new
       end
     end
   
