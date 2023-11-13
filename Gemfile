@@ -73,3 +73,5 @@ gem 'jquery-rails', "~> 4.6.0"
 gem "cssbundling-rails", "~> 1.3"
 
 gem "jsbundling-rails", "~> 1.2"
+
+gem "pagy", "~> 6.2"

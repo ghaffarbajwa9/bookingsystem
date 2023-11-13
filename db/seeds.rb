@@ -33,35 +33,70 @@
 # p "Created #{Customer.count} customers"
 # Employee.destroy_all
 
-# Employee.create!([{
-#     name:'Hassan Wahla',
-#     email:'Hassanwahla@mail.com',
-#     phone:2343434,
-#     emptype:'admin'
-# },
+# Customer.create!([{
+#     name:'aftab Wahla',
+#     email:'aftabwahla@mail.com',
+#     phone:23764545,
+#     },
 # {
-#     name:'Naeem',
-#     email:'naeem@mail.com',
-#     phone:234356666,
-#     emptype:'barbar'
-# },
+#     name:'asghar',
+#     email:'asghar@mail.com',
+#     phone:123456,
+#     },
 # {
-#     name:'adeel',
-#     email:'adeel@mail.com',
-#     phone:9892893,
-#     emptype:'barbar'
-# },
+#     name:'taqweem',
+#     email:'taqweem@mail.com',
+#     phone:98239437,
+#     },
 # {
-#     name:'zegham',
-#     email:'zegham@mail.com',
-#     phone:23948734,
-#     emptype:'accountant'
-# },
+#     name:'zeeshan',
+#     email:'zeeshan@mail.com',
+#     phone:23434234234,
+#     },
 # {
-#     name:'Nasir',
-#     email:'nasir@mail.com',
-#     phone:23434,
-#     emptype:'accountant'
-# },
+#     name:'dilawar',
+#     email:'dilawar@mail.com',
+#     phone:2343545,
+#     },
+# {
+#     name:'nizam',
+#     email:'nizam@mail.com',
+#     phone:23121223,
+#     },
+# {
+#     name:'nazim',
+#     email:'nazim@mail.com',
+#     phone:5656465,
+#     },
+# {
+#     name:'abid',
+#     email:'abid@mail.com',
+#     phone:234342432,
+#     },
+# {
+#     name:'azam',
+#     email:'azam@mail.com',
+#     phone:92384839,
+#     },
+# {
+#     name:'amanat',
+#     email:'amanat@mail.com',
+#     phone:23687878,
+#     },
+# {
+#     name:'adeel ali',
+#     email:'adeelali@mail.com',
+#     phone:23434334545,
+#     },
+# {
+#     name:'adnan nasir',
+#     email:'adnannasir@mail.com',
+#     phone:2343545,
+#     },
+# {
+#     name:'adnan bashir',
+#     email:'adnanbashir@mail.com',
+#     phone:299999777,
+#     },
 # ])
 

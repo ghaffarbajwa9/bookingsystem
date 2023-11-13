@@ -1,7 +1,9 @@
 class EmployeesController < ApplicationController
   # before_action :authenticate_user!
   def index
-    @employees = Employee.all
+    # @employees = Employee.all
+    @pagy, @employees = pagy(Employee.all(), items: 10)
+
   end
   
   def new 

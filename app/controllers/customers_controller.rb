@@ -1,6 +1,8 @@
 class CustomersController < ApplicationController
     def index 
-        @customers = Customer.all
+        # @customers = Customer.all
+        @pagy, @customers = pagy(Customer.all(), items: 10)
+
     end
     def new
         @customer = Customer.new

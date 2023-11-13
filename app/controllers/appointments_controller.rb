@@ -1,6 +1,8 @@
 class AppointmentsController < ApplicationController
     def index
-      @appointments = Appointment.all
+      # @appointments = Appointment.all
+      @pagy, @appointments = pagy(Appointment.all(), items: 10)
+
     end
   
     def new
