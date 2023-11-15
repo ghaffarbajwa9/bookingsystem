@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
+  load_and_authorize_resource
   def index
     # @employees = Employee.all
     @pagy, @employees = pagy(Employee.all(), items: 10)

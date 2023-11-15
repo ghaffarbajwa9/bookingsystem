@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+    before_action :authenticate_user!
+    load_and_authorize_resource
     def index 
         # @customers = Customer.all
         @pagy, @customers = pagy(Customer.all(), items: 10)

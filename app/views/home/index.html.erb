@@ -1,8 +1,8 @@
 <% if current_user %>
-    <% if current_user.usertype=='admin' %>
-    <h1>Welcome to dashboard</h1>
+    <% if current_user.usertype? %>
+    <h1>Welcome to <%= current_user.usertype %> dashboard</h1>
     <% else %>
-        <h3>You are guest user</h3>
+        <h3>You are guest user. Please refer to admin for rights. </h3>
     <% end %>
 <% else %>
     <% controller.redirect_to new_user_session_path %>
