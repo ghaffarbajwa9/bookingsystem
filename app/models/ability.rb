@@ -7,6 +7,7 @@ class Ability
     user ||= User.new
     if user.admin?
       can :manage, Employee
+      can :manage, User
       can :manage, Customer 
       can :manage, Appointment
     elsif user.accountant?

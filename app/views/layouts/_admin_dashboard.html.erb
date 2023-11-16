@@ -34,7 +34,7 @@
                                 <div class="sb-sidenav-menu-heading">Core</div>
                                 <a class="nav-link" href="/">
                                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                    Dashboard
+                                    <%= current_user.usertype.capitalize %> Dashboard
                                 </a>
                                 <div class="sb-sidenav-menu-heading">Interface</div>
                                 <% if can? :manage, Employee %>
