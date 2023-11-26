@@ -24,4 +24,5 @@ test:
 
 production:
   <<: *default
-  database: bookingsystem_pro
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: bookingsystem_pro
