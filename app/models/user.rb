@@ -12,6 +12,7 @@ class User < ApplicationRecord
   def admin?
     usertype=='admin'
   end
+  
   def accountant?
     usertype == 'accountant'
   end
